@@ -1,0 +1,30 @@
+@import "@/styles/variables";
+@import "@/styles/media/media-queries";
+
+.logo {
+  transition: width 0.4s ease, height 0.4s ease;
+
+  &--custom {
+    &,
+    & *[fill] {
+      fill: currentColor !important;
+    }
+  }
+
+  @include table {
+    width: 177px;
+  }
+
+  // @include desktop {
+  //   width: 130px;
+  //   height: auto;
+  // }
+
+  // @include table {
+  //   width: 177px;
+  // }
+
+  // @include mobile {
+  //   width: 130px;
+  // }
+}

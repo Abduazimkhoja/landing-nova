@@ -1,0 +1,61 @@
+{
+  "certificates": "Sertifikalar",
+  "catalogs": "Kataloglar",
+  "video": "Kurulum videoları",
+  "company-name": "Şirket ünvanı",
+
+  "news": "Haberler",
+  "news-related": "Benzer haberler",
+
+  "more": "Daha",
+  "hide": "Gizle",
+
+  "category": "Ürün kategorileri",
+
+  "product": "Ürün",
+  "product-info": "Ürün hakkında bilgi",
+  "products": "Ürünler",
+  "products-related": "Benzer ürünler",
+  "all-products": "Tüm ürünler",
+
+  "download": "Indi̇ri̇n",
+  "product-download": "Ürün kartini i̇ndi̇ri̇n",
+
+  "show": "Bakmak",
+  "show-all": "Hepsini Göster",
+  "show-more": "Daha fazla göster",
+
+  "contacts": "İletişim",
+  "central": "Merkez Ofis",
+  "factory": "Fabrika",
+  "factories": "Fabrikalarımız",
+  "address": "Adres",
+  "phone": "Telefon",
+  "email": "E-Posta",
+
+  "allRightsReserved": "Tüm hakları saklıdır",
+
+  "menu": {
+    "home": "Ana sayfa",
+    "about": "Hakkımızda",
+    "products": "Ürünler",
+    "media": "Medya",
+    "news": "Haberler",
+    "contact": "İletişim"
+  },
+
+  "empty": {
+    "list": "Henüz öğe yok",
+
+    "posts": "Henüz haber yok",
+    "related-posts": "Henüz ilgili haber yok",
+
+    "categories": "Henüz kategori yok",
+    "subcategories": "Henüz alt kategori yok",
+
+    "products": "Henüz ürün yok",
+    "products-related": "Henüz ilgili ürün yok",
+
+    "videos": "Henüz video yok"
+  }
+}

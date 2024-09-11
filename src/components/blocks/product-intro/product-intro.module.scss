@@ -1,0 +1,133 @@
+@import "@/styles/variables";
+@import "@/styles/media/media-queries";
+
+.gallery {
+  grid-area: gallery;
+  @include table {
+    margin-bottom: 30px;
+  }
+}
+
+.thumbnail {
+  width: 100px !important;
+  height: 100px !important;
+
+  img {
+    width: 92px !important;
+    height: 92px !important;
+    object-fit: contain !important;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "text gallery"
+    "description gallery"
+    "buttons gallery";
+  align-content: start;
+  column-gap: 30px;
+
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid $stroke;
+
+  @include table {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    grid-template-areas:
+      "text"
+      "gallery"
+      "description"
+      "buttons";
+  }
+
+  @include mobile {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  grid-area: text;
+
+  @include table {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.description {
+  margin-top: 10px;
+  margin-inline-end: -7px;
+  padding-inline-end: 7px;
+
+  grid-area: description;
+
+  // @include table {
+  //   max-height: 300px;
+  //   height: fit-content;
+
+  //   overflow: auto;
+  //   overflow-x: hidden;
+  // }
+
+  ul,
+  ol,
+  li {
+    list-style: revert;
+    margin-inline-start: 10px;
+  }
+
+  & pre,
+  & p {
+    font: inherit;
+    text-wrap: wrap;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  grid-area: buttons;
+  margin-top: 30px;
+
+  @include table {
+    gap: 10px;
+  }
+
+  @include mobile {
+    margin-top: 15px;
+  }
+}
+
+// :global(.swiper-dynamic.swiper .swiper-slide):has(.image) {
+//   display: flex;
+// }
+
+// .image {
+//   max-width: 660px;
+//   max-height: 400px;
+
+//   aspect-ratio: 1/1;
+//   margin: auto;
+//   // padding: 20px;
+
+//   @include table {
+//     max-width: 100%;
+//   }
+
+//   img {
+//     width: auto;
+//     height: 100%;
+//     margin: 0 auto;
+//     object-fit: contain !important;
+//     object-position: center;
+//   }
+// }

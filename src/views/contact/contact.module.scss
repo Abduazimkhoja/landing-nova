@@ -1,0 +1,19 @@
+@import "@/styles/media/media-queries";
+
+.title {
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 80px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

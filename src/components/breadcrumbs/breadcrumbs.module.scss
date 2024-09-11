@@ -1,0 +1,51 @@
+@import "@/styles/media/media-queries";
+
+.wrapper {
+  @include mobile {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.item:last-child .link::after {
+  content: "";
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  text-transform: lowercase;
+
+  &::after {
+    content: "›";
+  }
+
+  @include desktop {
+    max-width: 250px;
+  }
+
+  span {
+    font: inherit;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    @include desktop {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+:global(.content-rtl) .link svg {
+  transform: scale(-1, 1);
+}

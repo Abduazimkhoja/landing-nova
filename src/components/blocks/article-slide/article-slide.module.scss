@@ -1,0 +1,40 @@
+@import "@/styles/media/media-queries";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  margin-bottom: 80px;
+}
+
+.content {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.button-mobile {
+  display: none;
+}
+
+@include table {
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    align-items: center;
+    button {
+      display: none;
+    }
+  }
+
+  .button-mobile {
+    display: flex;
+  }
+}

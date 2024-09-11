@@ -1,0 +1,53 @@
+@import "@/styles/variables";
+@import "@/styles/media/media-queries";
+
+.wrapper {
+  margin-bottom: 80px;
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+
+  @include table {
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    justify-items: center;
+  }
+}
+
+.button {
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+}
+
+@include mobile {
+  .item {
+    max-width: 400px;
+    width: 100%;
+    & div {
+      width: inherit;
+    }
+  }
+}
+
+// .item {
+//   @include table {
+//     display: none;
+//     &:nth-child(-n + 6) {
+//       display: grid;
+//     }
+//   }
+// }

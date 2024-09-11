@@ -1,0 +1,88 @@
+@import "@/styles/variables";
+@import "@/styles/media/media-queries";
+.card {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 30px;
+  background: $bg-primary;
+
+  &:not(.cardOrientRow):nth-child(even) {
+    padding-inline-start: 15px;
+  }
+  &:not(.cardOrientRow):nth-child(odd) {
+    padding-inline-end: 15px;
+  }
+
+  &:not(.cardOrientRow):nth-child(even),
+  &:not(.cardOrientRow):nth-child(odd) {
+    @include table {
+      padding: 0;
+    }
+  }
+
+  @include table {
+    width: 100%;
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 235 / 132;
+  flex: 1;
+}
+
+.cardOrientRow {
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  & .map {
+    width: 650px;
+    aspect-ratio: 130 / 73; //соотношение сторон
+  }
+
+  @include table {
+    flex-direction: column;
+    & .content,
+    & .map {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+
+  @include mobile {
+    gap: 10px;
+  }
+}
+
+// info
+.info {
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  p:global(.fw-bold) {
+    text-wrap: nowrap;
+  }
+}

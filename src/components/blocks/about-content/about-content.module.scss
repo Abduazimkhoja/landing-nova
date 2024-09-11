@@ -1,0 +1,110 @@
+@import "@/styles/media/media-queries";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.block {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+
+  // если описание превышает высоту картинки в N раз
+  &-column {
+    flex-direction: column;
+  }
+
+  &:not(.block-column):nth-child(even) {
+    .image {
+      order: 2;
+      @include table {
+        order: 1;
+      }
+    }
+
+    .text {
+      @include table {
+        order: 2;
+      }
+    }
+  }
+
+  @include table {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+.image {
+  width: 100%;
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: auto 650 / 365;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text {
+  margin: auto 0;
+  flex: 1;
+
+  // если описание не превышает лимит высоты
+  &-within-limit {
+    & .button { 
+      display: none;
+    }
+    & .description {
+      height: auto !important;
+      margin-bottom: 0;
+      overflow: visible;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include table {
+    margin-bottom: 10px;
+  }
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.description {
+  position: relative;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  p {
+    font: inherit;
+  }
+
+  &:not(.open)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0.881) 83%);
+  }
+}
+
+.button {
+  height: 20px;
+  border-radius: 5px;
+}

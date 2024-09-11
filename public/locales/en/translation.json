@@ -1,0 +1,61 @@
+{
+  "certificates": "Certificates",
+  "catalogs": "Catalogs",
+  "video": "Installation videos",
+  "company-name": "Company name",
+
+  "news": "News",
+  "news-related": "Related news",
+
+  "more": "More",
+  "hide": "Hide",
+
+  "category": "Product categories",
+
+  "product": "Product",
+  "product-info": "Information about product",
+  "products": "Products",
+  "products-related": "Related products",
+  "all-products": "All products",
+
+  "show": "Show",
+  "show-all": "Show all",
+  "show-more": "Show more",
+
+  "download": "Download",
+  "product-download": "Download product card",
+
+  "contacts": "Contacts",
+  "central": "Central Office",
+  "factory": "Factory",
+  "factories": "Our factories",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "E-mail",
+
+  "allRightsReserved": "All rights reserved",
+
+  "menu": {
+    "home": "Home",
+    "about": "About us",
+    "products": "Products",
+    "media": "Media",
+    "news": "News",
+    "contact": "Contacts"
+  },
+
+  "empty": {
+    "list": "No elements yet",
+
+    "posts": "No news yet",
+    "related-posts": "No related news yet",
+
+    "categories": "No categories yet",
+    "subcategories": "No subcategories yet",
+
+    "products": "No products yet",
+    "products-related": "No related products yet",
+
+    "videos": "No videos yet"
+  }
+}

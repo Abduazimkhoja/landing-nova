@@ -1,0 +1,16 @@
+@import "@/styles/media/media-queries";
+
+.title {
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 60px;
+
+  @include mobile {
+    row-gap: 20px;
+  }
+}
