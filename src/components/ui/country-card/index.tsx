@@ -22,8 +22,8 @@ const CountryCard: FC<Props> = ({ className, ...rest }) => {
               <Image
                 width="500"
                 height="250"
-                src={`/images/countries/${country}-card.webp`}
-                alt=""
+                src={`/images/countries/${country}-card.jpg`}
+                alt="country"
                 className={styles.img}
               />
               <a target="_blank" href={link} className={styles.link}>
