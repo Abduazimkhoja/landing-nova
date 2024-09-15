@@ -6,10 +6,10 @@ import { HomeProps } from "./home.props";
 
 import { CategoryCard, PostCard, ProductCard, Slider } from "@/components";
 import HomeHero from "@/components/blocks/home-hero/home-hero";
+import CountryCard from "@/components/ui/country-card";
 import dynamic from "next/dynamic";
 import AboutView from "../about/about.view";
 const StatsCard = dynamic(() => import("@/components/ui/stats-card"), { ssr: false });
-const CountryCard = dynamic(() => import("@/components/ui/country-card"), { ssr: false });
 
 export const HomeView: FC<HomeProps> = ({ banners, categories, certificates, posts, catalogs, abouts }) => {
   const { t } = useTranslation();
