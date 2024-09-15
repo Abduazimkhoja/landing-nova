@@ -28,7 +28,7 @@ const CountryCard: FC<Props> = ({ className, ...rest }) => {
               <Image
                 width="800"
                 height="400"
-                src={countriesCardImageData[country as keyof typeof countriesCardImageData]}
+                src={countriesCardImageData?.[country as keyof typeof countriesCardImageData]?.src}
                 // src={`/images/countries/${country}-card.jpg`}
                 alt="country"
                 className={styles.img}
