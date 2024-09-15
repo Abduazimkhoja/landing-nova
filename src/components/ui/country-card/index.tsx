@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { countryCardsData } from "./country-data";
 import styles from "./style.module.scss";
+import { countriesCardImageData } from "@/assets/images/countries";
 
 type Props = {
   className?: string;
@@ -25,9 +26,10 @@ const CountryCard: FC<Props> = ({ className, ...rest }) => {
           <li className={styles.item} key={labels[`label_${language}`]}>
             <div className={styles.card}>
               <Image
-                width="500"
-                height="250"
-                src={`/images/countries/${country}-card.jpg`}
+                width="800"
+                height="400"
+                src={countriesCardImageData[country as keyof typeof countriesCardImageData]}
+                // src={`/images/countries/${country}-card.jpg`}
                 alt="country"
                 className={styles.img}
               />
