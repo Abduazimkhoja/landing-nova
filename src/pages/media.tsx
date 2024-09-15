@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import { FC } from "react";
@@ -25,7 +25,7 @@ export const MediaPage: FC<MediaPageProps> = ({ _nextI18Next, ...rest }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<MediaPageProps> = async ({ locale }) => {
+export const getServerSideProps: GetServerSideProps<MediaPageProps> = async ({ locale }) => {
   try {
     const video = await getCards({ language: locale });
 
@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps<MediaPageProps> = async ({ locale })
         catalogs,
         ...(await serverSideTranslations(String(locale))),
       },
-      revalidate: 1,
+      // revalidate: 1,
     };
   } catch {
     return {

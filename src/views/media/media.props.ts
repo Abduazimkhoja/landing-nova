@@ -1,4 +1,4 @@
-import { MediaPageProps } from "@/pages/media";2
+import { MediaPageProps } from "@/pages/media";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 export interface MediaProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, MediaPageProps {}
