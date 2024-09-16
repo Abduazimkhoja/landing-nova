@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { countryCardsData } from "./country-data";
 import styles from "./style.module.scss";
 import { countriesCardImageData } from "@/assets/images/countries";
+import { DOMAIN } from "@/helpers/api.helper";
 
 type Props = {
   className?: string;
@@ -28,8 +29,8 @@ const CountryCard: FC<Props> = ({ className, ...rest }) => {
               <Image
                 width="800"
                 height="400"
-                src={countriesCardImageData?.[country as keyof typeof countriesCardImageData]?.src}
-                // src={`/images/countries/${country}-card.jpg`}
+                // src={countriesCardImageData?.[country as keyof typeof countriesCardImageData]?.src}
+                src={`${DOMAIN}/uploads/assets/images/${country}-card.jpg`}
                 alt="country"
                 className={styles.img}
               />
