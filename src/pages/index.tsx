@@ -20,6 +20,10 @@ import { ICertificate } from "@/types/certificate.interface";
 import { IPost } from "@/types/post.interface";
 import { HomeView } from "@/views";
 import { IAbout } from "@/types/about.interface";
+import { ContactTypeEnum } from "@/enums/contact-type.enum";
+import { IContact } from "@/types/contact.interface";
+
+import { getByType as getContactByType } from "@/api/contact.api";
 
 const HomePage: FC<HomePageProps> = ({ _nextI18Next, ...rest }) => {
   return (
@@ -51,6 +55,9 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
 
     const { data: certificates } = await getAllCertificates({ language: locale });
 
+    const { data: centrals } = await getContactByType(ContactTypeEnum.CENTRAL, locale);
+    const { data: factories } = await getContactByType(ContactTypeEnum.FACTORY, locale);
+
     const {
       data: { data: abouts },
     } = await getAllAbouts({ language: locale });
@@ -63,6 +70,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
         catalogs,
         posts,
         abouts,
+        centrals,
+        factories,
         ...(await serverSideTranslations(String(locale))),
       },
       revalidate: 1,
@@ -83,4 +92,6 @@ export interface HomePageProps extends Record<string, unknown> {
   posts: IPost[];
   catalogs: ICatalog[];
   abouts: IAbout[];
+  centrals: IContact[];
+  factories: IContact[];
 }

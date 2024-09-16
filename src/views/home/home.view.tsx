@@ -9,9 +9,19 @@ import HomeHero from "@/components/blocks/home-hero/home-hero";
 import CountryCard from "@/components/ui/country-card";
 import dynamic from "next/dynamic";
 import AboutView from "../about/about.view";
+import ContactView from "../contact/contact.view";
 const StatsCard = dynamic(() => import("@/components/ui/stats-card"), { ssr: false });
 
-export const HomeView: FC<HomeProps> = ({ banners, categories, certificates, posts, catalogs, abouts }) => {
+export const HomeView: FC<HomeProps> = ({
+  banners,
+  categories,
+  certificates,
+  posts,
+  catalogs,
+  abouts,
+  centrals,
+  factories,
+}) => {
   const { t } = useTranslation();
 
   //ставит ограничение на количество элементов
@@ -30,8 +40,9 @@ export const HomeView: FC<HomeProps> = ({ banners, categories, certificates, pos
       <CountryCard />
       <StatsCard />
       <AboutView abouts={abouts} />
+      <ContactView centrals={centrals} factories={factories} />
 
-      {!!categories.length && (
+      {/* {!!categories.length && (
         <section className="container mb-80 products-slide">
           <h2 className="color-accent mb-30">{t("products")}</h2>
           <Slider mobile={true} type="dynamic" quantity={4}>
@@ -43,9 +54,9 @@ export const HomeView: FC<HomeProps> = ({ banners, categories, certificates, pos
               ))}
           </Slider>
         </section>
-      )}
+      )} */}
 
-      {!!certificates.length && (
+      {/* {!!certificates.length && (
         <section className="container mb-80">
           <h2 className="color-accent mb-30">{t("certificates")}</h2>
           <Slider mobile={true} type="dynamic" quantity={4}>
@@ -88,7 +99,7 @@ export const HomeView: FC<HomeProps> = ({ banners, categories, certificates, pos
             })}
           </Slider>
         </section>
-      )}
+      )} */}
     </>
   );
 };
