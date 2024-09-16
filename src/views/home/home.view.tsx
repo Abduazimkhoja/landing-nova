@@ -26,10 +26,10 @@ export const HomeView: FC<HomeProps> = ({
 
   //ставит ограничение на количество элементов
   const maxElemet = 12;
-  if (categories.length > maxElemet) categories.splice(maxElemet);
-  if (certificates.length > maxElemet) certificates.splice(maxElemet);
-  if (posts.length > maxElemet) posts.splice(maxElemet);
-  if (catalogs.length > maxElemet) catalogs.splice(maxElemet);
+  // if (categories.length > maxElemet) categories.splice(maxElemet);
+  // if (certificates.length > maxElemet) certificates.splice(maxElemet);
+  // if (posts.length > maxElemet) posts.splice(maxElemet);
+  // if (catalogs.length > maxElemet) catalogs.splice(maxElemet);
 
   return (
     <>
@@ -40,7 +40,7 @@ export const HomeView: FC<HomeProps> = ({
       <CountryCard />
       <StatsCard />
       <AboutView abouts={abouts} />
-      <ContactView centrals={centrals} factories={factories} />
+      <ContactView centrals={[]} factories={factories} />
 
       {/* {!!categories.length && (
         <section className="container mb-80 products-slide">
