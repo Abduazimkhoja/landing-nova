@@ -30,7 +30,7 @@ const CountryCard: FC<Props> = ({ className, ...rest }) => {
                 width="800"
                 height="400"
                 // src={countriesCardImageData?.[country as keyof typeof countriesCardImageData]?.src}
-                src={`${DOMAIN}/uploads/assets/images/${country}-card.jpg`}
+                src={`${DOMAIN}/uploads/assets/images/${country}-card.webp`}
                 alt="country"
                 className={styles.img}
               />
