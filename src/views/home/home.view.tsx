@@ -1,25 +1,26 @@
 import { useTranslation } from "next-i18next";
 import { FC } from "react";
-import { SwiperSlide } from "swiper/react";
+// import { SwiperSlide } from "swiper/react";
 
 import { HomeProps } from "./home.props";
 
-import { CategoryCard, PostCard, ProductCard, Slider } from "@/components";
+// import { CategoryCard, PostCard, ProductCard, Slider } from "@/components";
 import HomeHero from "@/components/blocks/home-hero/home-hero";
 import CountryCard from "@/components/ui/country-card";
 import dynamic from "next/dynamic";
 import AboutView from "../about/about.view";
 import ContactView from "../contact/contact.view";
+import { HomeIntro } from "@/components";
 const StatsCard = dynamic(() => import("@/components/ui/stats-card"), { ssr: false });
 
 export const HomeView: FC<HomeProps> = ({
   banners,
-  categories,
-  certificates,
-  posts,
-  catalogs,
+  // categories,
+  // certificates,
+  // posts,
+  // catalogs,
   abouts,
-  centrals,
+  // centrals,
   factories,
 }) => {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ export const HomeView: FC<HomeProps> = ({
   return (
     <>
       <section>
-        <HomeHero banners={banners} />
+        <HomeIntro banners={banners} />
       </section>
 
       <CountryCard />

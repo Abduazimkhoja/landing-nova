@@ -13,7 +13,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ banners }) => {
   return (
     <div className={styles.wrapper}>
 
-      {/* <div className={cn(styles.background)}>
+      <div className={cn(styles.background)}>
         <div
           className={cn(styles.background__desktop)}
           style={{ backgroundImage: `url('${DOMAIN}${posterDesktop}')` }}
@@ -40,9 +40,9 @@ export const HomeHero: FC<HomeHeroProps> = ({ banners }) => {
           />
         </div>
       </div>
-*/}
 
-             <Slider className={cn(styles.swiper)} type={"full-screen"}>
+
+            {/* <Slider className={cn(styles.swiper)} type={"full-screen"}>
         {banners.map(({ id, posterDesktop, posterMobile, title, description, subtitle }, index) => {
           return (
             <SwiperSlide className={cn(styles.slide)} key={id}>
@@ -78,7 +78,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ banners }) => {
             </SwiperSlide>
           );
         })}
-      </Slider> 
+      </Slider> */}
     </div>
   );
 };
