@@ -17,7 +17,7 @@ export const countryCardsData = {
       label_en: "Product range in Egypt",
       label_ar: "المنتجات في مصر",
       label_tr: "Mısır ürün çeşidi",
-      link: "https://eg.novaplastik.uz/",
+      link: "https://eg.novayetkiliservis.com",
       country: "eg",
     },
     {
@@ -25,7 +25,7 @@ export const countryCardsData = {
       label_en: "Product range in Türkiye",
       label_ar: "المنتجات في تركيا",
       label_tr: "Türkiye ürün çeşidi",
-      link: "https://tr.novaplastik.uz/",
+      link: "https://tr.novayetkiliservis.com",
       country: "tr",
     },
   ],
