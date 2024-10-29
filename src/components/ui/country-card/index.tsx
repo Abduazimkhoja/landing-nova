@@ -2,7 +2,7 @@ import { DOMAIN } from "@/helpers/api.helper";
 import { LangTuple } from "@/helpers/languages.helper";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { countryCardsData } from "./country-data";
 import styles from "./style.module.scss";
 

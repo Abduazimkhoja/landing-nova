@@ -1,6 +1,6 @@
 import { LangTuple } from "@/helpers/languages.helper";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { statsCardsData } from "./stats-data";
 import styles from "./style.module.scss";
 import CountUp from "react-countup";
