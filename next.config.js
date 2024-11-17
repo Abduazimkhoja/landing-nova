@@ -49,6 +49,16 @@ const nextConfig = {
   //   ];
   // },
 
+  async redirects() {
+    return [
+      {
+        source: "/kurulum-videolari",
+        destination: "https://tr.novaplastik.com/media",
+        permanent: true,
+      },
+    ];
+  },
+
   webpack(config, options) {
     config.module.rules.push({
       loader: "@svgr/webpack",
