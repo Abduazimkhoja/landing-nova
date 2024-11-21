@@ -42,7 +42,6 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
     const {
       data: { data: banners },
     } = await getAllBanners({ language: locale });
-    console.log(banners);
     
     // const {
     //   data: { data: categories },
@@ -58,12 +57,10 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
 
     // const { data: centrals } = await getContactByType(ContactTypeEnum.CENTRAL, locale);
     const { data: factories } = await getContactByType(ContactTypeEnum.FACTORY, locale);
-    console.log(factories);
 
     const {
       data: { data: abouts },
     } = await getAllAbouts({ language: locale });
-    console.log(abouts);
 
     return {
       props: {
@@ -79,9 +76,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
       },
       revalidate: 1,
     };
-  } catch (e) {
-    console.log(e)
-
+  } catch {
     return {
       notFound: true,
     };
