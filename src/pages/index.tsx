@@ -42,7 +42,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
     const {
       data: { data: banners },
     } = await getAllBanners({ language: locale });
-
+    console.log(banners);
+    
     // const {
     //   data: { data: categories },
     // } = await getAllCategories({ language: locale, limit: 12 });
@@ -57,10 +58,12 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
 
     // const { data: centrals } = await getContactByType(ContactTypeEnum.CENTRAL, locale);
     const { data: factories } = await getContactByType(ContactTypeEnum.FACTORY, locale);
+    console.log(factories);
 
     const {
       data: { data: abouts },
     } = await getAllAbouts({ language: locale });
+    console.log(abouts);
 
     return {
       props: {
