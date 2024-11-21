@@ -76,7 +76,9 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
       },
       revalidate: 1,
     };
-  } catch {
+  } catch (e) {
+    console.log(e)
+
     return {
       notFound: true,
     };
