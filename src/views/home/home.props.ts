@@ -1,5 +1,11 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-import { HomePageProps } from "@/pages";
+import { IBanner } from "@/types/banner.interface";
+import { IAbout } from "@/types/about.interface";
+import { IContact } from "@/types/contact.interface";
 
-export interface HomeProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, HomePageProps {}
+export interface HomeProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  banners: IBanner[];
+  abouts: IAbout[];
+  factories: IContact[];
+}
