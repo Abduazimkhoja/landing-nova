@@ -24,28 +24,29 @@ const HomePage: FC<HomePageProps> = ({ _nextI18Next, ...rest }) => {
         <title>NOVA Plastik</title>
       </Head>
 
-      <HomeView {...rest} />
+      <div>{`It works don't worry)`}</div>
+      {/* <HomeView {...rest} /> */}
     </>
   );
 };
 
 export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ locale }) => {
   try {
-    const {
-      data: { data: banners },
-    } = await getAllBanners({ language: locale });
+    // const {
+    //   data: { data: banners },
+    // } = await getAllBanners({ language: locale });
 
-    const { data: factories } = await getContactByType(ContactTypeEnum.FACTORY, locale);
+    // const { data: factories } = await getContactByType(ContactTypeEnum.FACTORY, locale);
 
-    const {
-      data: { data: abouts },
-    } = await getAllAbouts({ language: locale });
+    // const {
+    //   data: { data: abouts },
+    // } = await getAllAbouts({ language: locale });
 
     return {
       props: {
-        banners,
-        abouts,
-        factories,
+        // banners,
+        // abouts,
+        // factories,
         ...(await serverSideTranslations(String(locale))),
       },
     };
@@ -61,7 +62,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async ({ lo
 export default withLayout(HomePage);
 
 export interface HomePageProps extends Record<string, unknown> {
-  banners: IBanner[];
-  abouts: IAbout[];
-  factories: IContact[];
+  // banners: IBanner[];
+  // abouts: IAbout[];
+  // factories: IContact[];
 }
