@@ -53,7 +53,7 @@ const nextConfig = {
     return [
       {
         source: "/kurulum-videolari",
-        destination: "https://tr.novaplastik.com/media",
+        destination: "https://tr.novaplastik.com/media/installation",
         permanent: true,
       },
     ];
