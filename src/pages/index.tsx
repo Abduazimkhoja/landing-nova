@@ -3,19 +3,19 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { IBanner } from "@/types/banner.interface";
-import { IAbout } from "@/types/about.interface";
-import { ContactTypeEnum } from "@/enums/contact-type.enum";
-import { IContact } from "@/types/contact.interface";
+// import { IBanner } from "@/types/banner.interface";
+// import { IAbout } from "@/types/about.interface";
+// import { ContactTypeEnum } from "@/enums/contact-type.enum";
+// import { IContact } from "@/types/contact.interface";
 
-import { getAll as getAllBanners } from "@/api/banner.api";
-import { getAll as getAllAbouts } from "@/api/about.api";
+// import { getAll as getAllBanners } from "@/api/banner.api";
+// import { getAll as getAllAbouts } from "@/api/about.api";
 
 import { withLayout } from "@/layout/layout";
 
-import { HomeView } from "@/views";
+// import { HomeView } from "@/views";
 
-import { getByType as getContactByType } from "@/api/contact.api";
+// import { getByType as getContactByType } from "@/api/contact.api";
 
 const HomePage: FC<HomePageProps> = ({ _nextI18Next, ...rest }) => {
   return (
